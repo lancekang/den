@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		* {margin:0; padding:0;}
+		.box-wrap {}
+		.box-wrap:after {content:""; display:block; clear:both;}
+		.box {float:left; padding:1.0416vw; background: #fff ; box-sizing:border-box;}
+		.box-inner {display:flex; justify-content:center; align-items:center; font-size:15px; font-weight:bold; color:#000; background: #d8d8d8;}
+		.box-txt {overflow: hidden; height:2.6em; margin-top:1.5625vw; color:#000; font-size:1.0416vw; line-height:1.3;}
+		.box.size01 {width:33.33%; }
+		.box.size01 .box-inner {height:36.25vw;}
+		.box.size02 {width:33.33%; }
+		.box.size02 .box-inner {height:20.9895vw;}
+		.box.size03 {width:33.33%;}
+		.box.size03 .box-inner {height:24.7916vw;}
+		.box.size04 {width:33.33%;}
+		.box.size04 .box-inner {height:18.802vw;}
+		.box.size05 {float:right; width:66.67%}
+		.box.size05 .box-inner {height:36.25vw;}
+		.box.size06 {width:50%;}
+		.box.size06 .box-inner {height:33.75vw;}
+		.ellip {display: block; height: 100%;}
+		.ellip-line {display: inline-block; text-overflow: ellipsis; white-space: nowrap;word-wrap: normal; max-width: 100%;}
+		.ellip, .ellip-line {position:relative;overflow: hidden;}
+	</style>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery.ellipsis.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+	    	$('.box-txt').ellipsis({
+			  lines: 2,             // force ellipsis after a certain number of lines. Default is 'auto'
+			  ellipClass: 'ellip',  // class used for ellipsis wrapper and to namespace ellip line
+			  responsive: true      // set to true if you want ellipsis to update on window resize. Default is false
+			});
+		});
+
+      </script>
+</head>
+<body>
+	<div class="box-wrap">
+		<div class="box size01">
+			<div class="box-inner">1</div>
+			<div class="box-txt">Keytar McSweeney&apos;s Williamsburg, readymade leggings try-hard 90&apos;s street art letterpress hoodie occupy Keytar McSweeney&apos;s Williamsburg, readymade leggings try-hard 90&apos;s street art letterpress hoodie occupy Keytar McSweeney&apos;s Williamsburg, readymade leggings try-hard 90&apos;s street art letterpress hoodie occupy </div>
+		</div>
+		<div class="box size02">
+			<div class="box-inner">2</div>
+			<div class="box-txt">Keytar McSweeney&apos;s Williamsburg, readymade leggings try-hard 90&apos;s street art letterpress hoodie occupy </div>
+		</div>
+		<div class="box size03">
+			<div class="box-inner">3</div>
+			<div class="box-txt">Keytar McSweeney&apos;s Williamsburg, readymade leggings try-hard 90&apos;s street art letterpress hoodie occupy </div>
+		</div>
+		<div class="box size05">
+			<div class="box-inner">5</div>
+			<div class="box-txt">Keytar McSweeney&apos;s Williamsburg, readymade leggings try-hard 90&apos;s street art letterpress hoodie occupy </div>
+		</div>
+		<div class="box size04">
+			<div class="box-inner">4</div>
+			<div class="box-txt">Keytar McSweeney&apos;s Williamsburg, readymade leggings try-hard 90&apos;s street art letterpress hoodie occupy </div>
+		</div>
+		<div class="box size06">
+			<div class="box-inner">6</div>
+			<div class="box-txt">Keytar McSweeney&apos;s Williamsburg, readymade leggings try-hard 90&apos;s street art letterpress hoodie occupy </div>
+		</div>
+		<div class="box size06">
+			<div class="box-inner">6</div>
+			<div class="box-txt">Keytar McSweeney&apos;s Williamsburg, readymade leggings try-hard 90&apos;s street art letterpress hoodie occupy </div>
+		</div>
+	</div>
+</body>
+</html>
